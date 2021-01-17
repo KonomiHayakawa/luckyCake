@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Discounts from './components/mainPage/Discounts/Discounts'
+import FooterContainer from './components/Footer/FooterContainer'
+import HeaderContainer from './components/Header/HeaderContainer'
+import HeroSection from './components/mainPage/HeroSection/HeroSection'
+import Infographic from './components/mainPage/Infographic/Infographic'
+import NewGoods from './components/mainPage/NewGoods/NewGoods'
+import OurServices from './components/mainPage/Services/OurServices'
+import {connect} from 'react-redux'
+import CallBackPopUPContainer from './components/common/CallBackPopUP/CallBackPopUpContainer'
 
-function App() {
+const App = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+    {props.isCallBackPopUpOpen && <CallBackPopUPContainer />}
+    <div className={`appWrapper ${props.isCallBackPopUpOpen ? 'popUpOpened' : null}`}>
+      <header>
+        <HeaderContainer/>
       </header>
+      <main>
+        <HeroSection />
+        <NewGoods />
+        <Discounts />
+        <OurServices />
+        <Infographic />
+      </main>
+      <footer>
+        <FooterContainer/>
+      </footer>
     </div>
-  );
+    </>
+  )
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  isCallBackPopUpOpen: state.appReducer.isCallBackPopUpOpen,
+})
+
+export default connect(mapStateToProps,{})(App)

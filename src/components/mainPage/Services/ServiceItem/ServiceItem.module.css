@@ -1,0 +1,48 @@
+.itemWrapper {
+  display: grid;
+  grid-template-rows: 17% 48% 20% 15%;
+  height: 400px;
+  justify-items: center;
+  align-content: center;
+  background-color: #EBD7DC;
+  padding: 20px;
+}
+
+.serviceTitle {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  color: #403D3D;
+}
+
+.description {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.actionBtn {
+  width: 100%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+
+  border-radius: 150px; 
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+
+  color: #EC5879;
+  opacity: 0.8;
+  border: 1px solid #EC5879;;
+  background-color: white;
+}

@@ -1,0 +1,20 @@
+.openCatalogBtn {
+  border-radius: 150px; 
+  text-align: center;
+  cursor: pointer;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+
+  color: white;
+  background-color: #EC5879;
+  border: 1px solid #EC5879;
+}

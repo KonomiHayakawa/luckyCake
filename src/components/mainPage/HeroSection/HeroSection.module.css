@@ -1,0 +1,24 @@
+.heroSectionWrapper {
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+  column-gap: 20px;
+  display: grid;
+}
+
+.infoArea {
+  grid-column: 1 / 6;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* .title {
+  grid-column: 1 / 6;
+} */
+
+
+.carouselArea {
+  grid-column: 7 / 13;
+  justify-self: end;
+  width: 100%;
+}

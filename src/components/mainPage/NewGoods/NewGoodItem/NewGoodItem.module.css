@@ -1,0 +1,63 @@
+.itemWrapper {
+  display: grid;
+  grid-template-rows: 15% 45% 26% 15%;
+  height: 500px;
+  justify-items: center;
+  align-content: center;
+  background-color: #EBD7DC;
+  padding: 20px;
+  text-align: center;
+}
+
+.goodTitle {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  color: #403D3D;
+}
+
+.description {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.actionBtn {
+  width: 100%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+
+  border-radius: 150px; 
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+
+  color: #EC5879;
+  /* opacity: 0.8; */
+  border: 1px solid #EC5879;;
+  background-color: white;
+  position: relative;
+}
+
+.addToCartIcon {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+  line-height: 60px;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #fff;
+  background-color:  #EC5879;
+}

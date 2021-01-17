@@ -1,0 +1,20 @@
+.phoneNumberWrapper {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.darkStyle {
+  color: black;
+}
+
+.lightStyle {
+  color: white;
+}

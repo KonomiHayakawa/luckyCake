@@ -1,0 +1,39 @@
+.discountItemWrapper {
+	position: relative;
+  width: 100%;
+  margin-top: 90px;
+}
+
+.discountImage {
+  width: 100%;
+  height: 100%;
+}
+
+.infoBlock {
+	position: absolute;
+	bottom: 50px;
+	left: 50px;
+  width: 60%;
+  background-color: rgba(235, 215, 220, 0.75);
+  padding: 10px;
+}
+
+.description {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130.4%;
+}
+
+.firstDiscountLabel {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+}
+
+.secondDiscountLabel {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+}

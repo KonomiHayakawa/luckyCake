@@ -1,0 +1,34 @@
+.wrapper {
+  width:  18%;
+  padding-left: 7%;
+  padding-right: 7%;
+  position: fixed;
+  left: 33%;
+  top: 15%;
+  z-index: 10;
+  background-color: #EBD7DC;
+  text-align: center;
+}
+
+.wrapper h2 {
+  z-index: 5;
+  position: relative;
+}
+
+.closePopUpIcon {
+  border: 1px solid #EC5879;
+  padding: 2px 3px;
+  border-radius: 50%;
+  font-size: 16px;
+  width: 16px;
+  color: #EC5879;
+  position: absolute;
+  left: 420px;
+  top: 10px;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.closePopUpIcon:hover {
+  transform: rotate(180deg);
+}

@@ -1,0 +1,33 @@
+.headerWrapper {
+  display: grid;
+  /* grid-template-columns: repeat(12, 72px); */
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+  column-gap: 20px;
+}
+
+.logo {
+  grid-column: 1 / 3;
+  display: flex;
+  justify-self: center;
+}
+
+.navigationMenu {
+  grid-column: 3 / 7;
+}
+
+.phoneNumber {
+  grid-column: 7 / 9;
+  display: flex;
+  justify-self: flex-end;
+}
+
+.callBack {
+  grid-column: 9 / 11;
+}
+
+.cart {
+  display: flex;
+  grid-column:  11 / 13;
+  justify-self: flex-end;
+}
