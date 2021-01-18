@@ -46,3 +46,8 @@
   border: 1px solid #EC5879;;
   background-color: white;
 }
+
+.actionBtn:hover {
+  background-color: #EC5879;
+  color: white;
+}

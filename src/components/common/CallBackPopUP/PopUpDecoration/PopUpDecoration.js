@@ -18,13 +18,13 @@ const PopUpDecoration = () => {
 
       <div className={classes.circle3}>
         <svg width="119" height="118" viewBox="0 0 159 158" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle opacity="0.75" cx="79.1419" cy="79.0166" r="76.8679" stroke="#FBF2F2" stroke-width="4"/>
+          <circle opacity="0.75" cx="79.1419" cy="79.0166" r="76.8679" stroke="#FBF2F2" strokeWidth="4"/>
         </svg>
       </div>
 
       <div className={classes.circle4}>
         <svg width="109" height="108" viewBox="0 0 159 158" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle opacity="0.75" cx="79.1419" cy="79.0166" r="76.8679" stroke="#FBF2F2" stroke-width="4"/>
+          <circle opacity="0.75" cx="79.1419" cy="79.0166" r="76.8679" stroke="#FBF2F2" strokeWidth="4"/>
         </svg>
       </div>
     </>

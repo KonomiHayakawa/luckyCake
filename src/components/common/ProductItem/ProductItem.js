@@ -1,8 +1,8 @@
 import React from 'react'
-import classes from './NewGoodItem.module.css'
-import shoppingCart from './../../../../img/newGoods/shoppingCart.svg'
+import classes from './ProductItem.module.css'
+import shoppingCart from './../../../img/newGoods/shoppingCart.svg'
 
-const NewGoodItem = (props) => {
+const ProductItem = (props) => {
   return (
     <div className={classes.itemWrapper}>
       <div className={classes.goodTitle}>
@@ -28,4 +28,4 @@ const NewGoodItem = (props) => {
   )
 }
 
-export default NewGoodItem
+export default ProductItem

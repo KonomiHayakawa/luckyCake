@@ -1,0 +1,83 @@
+.circle1,
+.circle2,
+.circle3,
+.circle8,
+.circle9,
+.circle10 {
+  z-index: 1;
+  position: absolute;
+}
+
+.circle5,
+.circle4,
+.circle6,
+.circle7,
+.circle11,
+.circle12 {
+  z-index: 15;
+  position: absolute;
+}
+
+.circle1 {
+  left: 0px;
+}
+
+.circle1Additional {
+  z-index: 2;
+  position: absolute;
+  left: 0px;
+}
+
+.circle2 {
+  right: 0px;
+}
+
+.circle3 {
+  left: 600px;
+  top: 500px;
+}
+
+.circle4 {
+  left: 1230px;
+  top: 670px;
+}
+
+.circle5 {
+  left: 80px;
+  top: 1250px;
+}
+
+.circle6 {
+  left: 655px;
+  top: 1960px;
+}
+
+.circle7 {
+  left: 725px;
+  top: 2020px;
+}
+
+.circle8 {
+  left: 1020px;
+  top: 2280px;
+}
+
+.circle9 {
+  left: 1060px;
+  top: 2335px;
+}
+
+.circle10 {
+  left: 0px;
+  top: 2575px;
+}
+
+.circle11 {
+  left: 160px;
+  top: 2735px;
+}
+
+.circle12 {
+  right: 0px;
+  top: 2881px;
+}

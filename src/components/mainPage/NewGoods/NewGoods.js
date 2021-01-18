@@ -4,7 +4,7 @@ import cake1 from './../../../img/newGoods/cake1.png'
 import cake2 from './../../../img/newGoods/cake2.png'
 import cake3 from './../../../img/newGoods/cake3.png'
 import cake4 from './../../../img/newGoods/cake4.png'
-import NewGoodItem from './NewGoodItem/NewGoodItem'
+import ProductItem from '../../common/ProductItem/ProductItem'
 
 const NewGoods = (props) => {
   const goods = [
@@ -39,14 +39,14 @@ const NewGoods = (props) => {
   ]
 
   return (
-    <div>
+    <div className={classes.wrapper}>
       <h2>
       Наши новинки
       </h2>
       <div className={classes.newGoodsArea}>
        {goods.map(good => {
           return (
-            <NewGoodItem 
+            <ProductItem 
               title={good.title}
               imgSrc={good.imgSrc}
               description={good.description}

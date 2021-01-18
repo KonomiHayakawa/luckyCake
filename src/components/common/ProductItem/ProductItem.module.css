@@ -1,6 +1,6 @@
 .itemWrapper {
   display: grid;
-  grid-template-rows: 15% 45% 26% 15%;
+  grid-template-rows: 13% 45% 28% 15%;
   height: 500px;
   justify-items: center;
   align-content: center;
@@ -16,6 +16,7 @@
   font-size: 18px;
   line-height: 22px;
   color: #403D3D;
+  padding-bottom: 0px;
 }
 
 .description {
@@ -43,10 +44,15 @@
   height: 50px;
 
   color: #EC5879;
-  /* opacity: 0.8; */
   border: 1px solid #EC5879;;
   background-color: white;
   position: relative;
+  opacity: 0.8;
+}
+
+.actionBtn:hover {
+  background-color: #EC5879;
+  color: white;
 }
 
 .addToCartIcon {

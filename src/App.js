@@ -1,34 +1,34 @@
 import './App.css'
-import Discounts from './components/mainPage/Discounts/Discounts'
 import FooterContainer from './components/Footer/FooterContainer'
 import HeaderContainer from './components/Header/HeaderContainer'
-import HeroSection from './components/mainPage/HeroSection/HeroSection'
-import Infographic from './components/mainPage/Infographic/Infographic'
-import NewGoods from './components/mainPage/NewGoods/NewGoods'
-import OurServices from './components/mainPage/Services/OurServices'
 import {connect} from 'react-redux'
 import CallBackPopUPContainer from './components/common/CallBackPopUP/CallBackPopUpContainer'
+import MainPageDecoration from './components/decoration/MainPageDecoration/MainPageDecoration'
+import {BrowserRouter, Route} from 'react-router-dom'
+import ProductsList from './components/ProductsList/ProductsList'
+import MainPage from './components/mainPage/MainPage'
 
 const App = (props) => {
   return (
-    <>
-    {props.isCallBackPopUpOpen && <CallBackPopUPContainer />}
-    <div className={`appWrapper ${props.isCallBackPopUpOpen ? 'popUpOpened' : null}`}>
-      <header>
-        <HeaderContainer/>
-      </header>
-      <main>
-        <HeroSection />
-        <NewGoods />
-        <Discounts />
-        <OurServices />
-        <Infographic />
-      </main>
-      <footer>
-        <FooterContainer/>
-      </footer>
-    </div>
-    </>
+    <BrowserRouter>
+      {props.isCallBackPopUpOpen && <CallBackPopUPContainer />}
+      <div className={`appWrapper ${props.isCallBackPopUpOpen ? 'popUpOpened' : null}`}>
+        <Route exact path='/' render={() => <MainPageDecoration />}/>
+        <div className='appContent'>
+          <header>
+            <HeaderContainer/>
+          </header>
+          <main>
+            <Route exact path='/' render={() => <MainPage />}/>
+            <Route path='/cakes' render={() => <ProductsList />} />
+          </main>
+          <footer>
+            <FooterContainer/>
+          </footer>
+        </div>
+
+      </div>
+    </BrowserRouter>
   )
 }
 

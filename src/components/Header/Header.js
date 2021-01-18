@@ -5,18 +5,18 @@ import classes from './Header.module.css'
 import PhoneNumber from './../common/PhoneNumber/PhoneNumber'
 import CallBackBtn from './../common/CallBackBtn/CallBackBtn'
 import CartArea from './CartArea/CartArea'
+import { NavLink } from 'react-router-dom'
 
 const Header = (props) => {
   return (
     <div className={classes.headerWrapper}>
-
-      <div className={classes.logo}>
-      <img 
-        src={logo}  
-        alt='logo'
-    
-      />
-      </div>
+      <NavLink to={'/'}>
+        <img 
+          src={logo}  
+          alt='logo'
+          className={classes.logo}
+        />
+      </NavLink>
   
       <div className={classes.navigationMenu} >
         <NavigationMenu textStyle='dark' />
@@ -28,7 +28,7 @@ const Header = (props) => {
 
       <div className={classes.callBack}>
         <CallBackBtn 
-          textStyle='dark' 
+          textStyle='pinkTransparent' 
           type='button'
           funcForClick={() => props.toggleCallBackPopUp()} 
         /> 

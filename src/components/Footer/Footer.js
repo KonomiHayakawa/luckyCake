@@ -5,15 +5,18 @@ import PhoneNumber from './../common/PhoneNumber/PhoneNumber'
 import CallBackBtn from './../common/CallBackBtn/CallBackBtn'
 import logoLight from './../../img/logoLight.svg'
 import BackToTop from './BackToTop/BackToTop'
+import { NavLink } from 'react-router-dom'
 
 const Footer = (props) => {
   return (
     <div className={classes.footerWrapper}>
-      <img 
-        src={logoLight}  
-        alt='logo'
-        className={classes.logo}
-      />
+      <NavLink to={'/'}>
+        <img 
+          src={logoLight}  
+          alt='logo'
+          className={classes.logo}
+        />
+      </NavLink>
 
       <div className={classes.navigationMenu} >
         <NavigationMenu textStyle='light'/>

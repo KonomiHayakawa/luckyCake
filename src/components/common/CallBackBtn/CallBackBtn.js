@@ -4,8 +4,8 @@ import classes from './CallBackBtn.module.css'
 const CallBackBtn = (props) => {
   let textStyle 
   switch (props.textStyle) {
-    case 'dark': 
-      textStyle = classes.darkStyle
+    case 'pinkTransparent': 
+      textStyle = classes.pinkTransparentStyle
       break;
     case 'light': 
       textStyle = classes.lightStyle

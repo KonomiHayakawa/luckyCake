@@ -1,11 +1,12 @@
 .wrapper {
-  margin-bottom: 70px;
+  margin-bottom: 85px;
 }
 
-.newGoodsArea {
+.productsList {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 100%;
   column-gap: 40px;
+  row-gap: 40px;
   justify-content: space-between;
 }
