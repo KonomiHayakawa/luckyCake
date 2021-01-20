@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './ServiceItem.module.css'
+import {NavLink} from 'react-router-dom'
 
 const ServiceItem = (props) => {
   return (
@@ -14,9 +15,9 @@ const ServiceItem = (props) => {
       <div className={classes.description}>
         {props.description}
       </div>
-      <div className={classes.actionBtn}>
+      <NavLink to={props.link} className={classes.actionBtn}>
         {props.actionText}
-      </div>
+      </NavLink>
     </div>
   )
 }

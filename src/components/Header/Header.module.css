@@ -1,6 +1,13 @@
+.header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  margin-left: 160px;
+  margin-right: 160px;
+}
+
 .headerWrapper {
   display: grid;
-  /* grid-template-columns: repeat(12, 72px); */
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
   column-gap: 20px;

@@ -1,7 +1,7 @@
 import React from 'react'
-import cartIcon from './../../../img/cart-icon.svg'
+import cartIcon from './../../../img/header/cart-icon.svg'
 import classes from './CartArea.module.css'
-import showMoreArrow from './../../../img/showMoreArrow.svg'
+import showMoreArrow from './../../../img/header/showMoreArrow.svg'
 
 const CartArea = () => {
   return (

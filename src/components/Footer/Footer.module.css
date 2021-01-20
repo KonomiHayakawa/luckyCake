@@ -1,3 +1,10 @@
+.footer {
+  background-color: #935E6A;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+
 .footerWrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);

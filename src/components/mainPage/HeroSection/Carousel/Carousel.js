@@ -2,9 +2,9 @@ import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import cake1 from './../../../../img/heroSection/cake1.svg'
-import cake2 from './../../../../img/heroSection/cake2.svg'
-import cake3 from './../../../../img/heroSection/cake3.svg'
+import cake1 from './../../../../img/mainPage/heroSection/cake1.svg'
+import cake2 from './../../../../img/mainPage/heroSection/cake2.svg'
+import cake3 from './../../../../img/mainPage/heroSection/cake3.svg'
 import classes from './Carousel.module.css'
 
 const Carousel = (props) => {

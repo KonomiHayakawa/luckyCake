@@ -1,9 +1,9 @@
 import React from 'react'
 import classes from './NewGoods.module.css'
-import cake1 from './../../../img/newGoods/cake1.png'
-import cake2 from './../../../img/newGoods/cake2.png'
-import cake3 from './../../../img/newGoods/cake3.png'
-import cake4 from './../../../img/newGoods/cake4.png'
+import cake1 from './../../../img/mainPage/newGoods/cake1.png'
+import cake2 from './../../../img/mainPage/newGoods/cake2.png'
+import cake3 from './../../../img/mainPage/newGoods/cake3.png'
+import cake4 from './../../../img/mainPage/newGoods/cake4.png'
 import ProductItem from '../../common/ProductItem/ProductItem'
 
 const NewGoods = (props) => {

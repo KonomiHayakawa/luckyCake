@@ -1,11 +1,12 @@
 import React from 'react'
 import classes from './OpenCatalogBtb.module.css'
+import {NavLink} from 'react-router-dom'
 
 const OpenCatalogBtn = (props) => {
   return (
-    <div className={classes.openCatalogBtn}>
+    <NavLink to='/cakes' className={classes.openCatalogBtn}>
       Смотреть каталог
-    </div>
+    </NavLink>
   )
 }
 

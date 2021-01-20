@@ -45,6 +45,7 @@
   opacity: 0.8;
   border: 1px solid #EC5879;;
   background-color: white;
+  text-decoration: none;
 }
 
 .actionBtn:hover {

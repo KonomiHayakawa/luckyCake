@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './ProductItem.module.css'
-import shoppingCart from './../../../img/newGoods/shoppingCart.svg'
+import shoppingCart from './../../../img/ProductItem/shoppingCart.svg'
 
 const ProductItem = (props) => {
   return (
@@ -11,12 +11,13 @@ const ProductItem = (props) => {
       <img 
         src={props.imgSrc}
         alt='serviceImage'
+        className={classes.image}
       />
       <div className={classes.description}>
         {props.description}
       </div>
       <div className={classes.actionBtn}>
-        {props.price}/{props.weight}
+        {props.price} грн/{props.weight} {props.unit}
         <div className={classes.addToCartIcon}>
           <img 
             src={shoppingCart}

@@ -5,9 +5,9 @@ import {NavLink} from 'react-router-dom'
 const NavigationMenu = (props) => {
   const menuItems = [
     {title: 'Торты', link: '/cakes', id: 1},
-    {title: 'Начинки', link: '/fillings', id: 2},
-    {title: 'Декор', link: '/decoration', id: 3},
-    {title: 'Капкейки', link: '/cupcakes', id: 4},
+    {title: 'Капкейки', link: '/cupcakes', id: 2},
+    {title: 'Печенье', link: '/biscuits', id: 3},
+    {title: 'Пироги', link: '/pies', id: 4},
   ]
 
   const textStyle = props.textStyle === 'dark' ? classes.darkStyle : classes.lightStyle

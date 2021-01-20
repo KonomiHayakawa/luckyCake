@@ -1,12 +1,13 @@
 import React from 'react'
 import DiscountLabel from '../DiscountLabel/DiscountLabel'
 import classes from './DiscountItem.module.css'
+import {NavLink} from 'react-router-dom'
 
 const DiscountItem = (props) => {
   const classForDiscountLabel = props.isFirstItem ? classes.firstDiscountLabel : classes.secondDiscountLabel
 
   return (
-    <div className={classes.discountItemWrapper}>
+    <NavLink to={props.link} className={classes.discountItemWrapper}>
       <img
         src={props.imgSrc}
         alt='discountImage'
@@ -23,7 +24,7 @@ const DiscountItem = (props) => {
       <div className={classForDiscountLabel}>
         <DiscountLabel/>
       </div>
-    </div>
+    </NavLink>
   )
 }
 
