@@ -25,7 +25,7 @@ const CallBackForm = (props) => {
   }
   
   const onSubmit = (formData) => {
-    console.log(formData)
+    props.sendFormData(formData)
   }
 
   return (
