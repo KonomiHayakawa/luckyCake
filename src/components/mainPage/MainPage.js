@@ -1,5 +1,5 @@
 import React from 'react'
-import Discounts from './Discounts/Discounts'
+import DiscountsContainer from './Discounts/DiscountsContainer'
 import HeroSection from './HeroSection/HeroSection'
 import Infographic from './Infographic/Infographic'
 import NewGoods from './NewGoods/NewGoods'
@@ -10,7 +10,7 @@ const MainPage = (props) => {
     <>
       <HeroSection />
       <NewGoods />
-      <Discounts />
+      <DiscountsContainer />
       <OurServices />
       <Infographic />     
     </>

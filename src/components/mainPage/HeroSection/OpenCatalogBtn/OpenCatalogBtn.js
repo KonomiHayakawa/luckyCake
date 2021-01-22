@@ -4,8 +4,10 @@ import {NavLink} from 'react-router-dom'
 
 const OpenCatalogBtn = (props) => {
   return (
-    <NavLink to='/cakes' className={classes.openCatalogBtn}>
-      Смотреть каталог
+    <NavLink to='/cakes' className={classes.openCatalogLink}>
+      <button className={classes.openCatalogBtn}>
+        Смотреть каталог
+      </button>
     </NavLink>
   )
 }

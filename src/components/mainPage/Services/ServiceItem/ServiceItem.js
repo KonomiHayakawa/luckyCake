@@ -11,6 +11,7 @@ const ServiceItem = (props) => {
       <img 
         src={props.imgSrc}
         alt='serviceImage'
+        className={classes.image}
       />
       <div className={classes.description}>
         {props.description}

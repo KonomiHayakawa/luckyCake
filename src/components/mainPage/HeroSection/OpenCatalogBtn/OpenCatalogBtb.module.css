@@ -1,21 +1,28 @@
+.openCatalogLink {
+  text-decoration: none;
+  margin: 30px 0px 30px 0px;
+}
+
 .openCatalogBtn {
   border-radius: 150px; 
   text-align: center;
   cursor: pointer;
-
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80px;
-
+  height: 70px;
   color: white;
   background-color: #EC5879;
   border: 1px solid #EC5879;
-  text-decoration: none;
+  width: 60%;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.openCatalogBtn:focus {
+  outline:0;
 }

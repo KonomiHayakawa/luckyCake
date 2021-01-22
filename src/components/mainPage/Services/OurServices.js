@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './OurServices.module.css'
 import serviceCakes from './../../../img/mainPage/services/service-cakes.png'
-import serviceFillings from './../../../img/mainPage/services/service-fillings.png'
+import serviceHolidays from './../../../img/mainPage/services/service-holidays.jpg'
 import serviceDecoration from './../../../img/mainPage/services/service-decoration.png'
 import serviceDelivery from './../../../img/mainPage/services/service-delivery.png'
 import ServiceItem from './ServiceItem/ServiceItem'
@@ -15,11 +15,11 @@ const OurServices = (props) => {
       link: '/cakes',
       id: 1
     },
-    { serviceTitle: 'Начинка на ваш вкус', 
-      imgSrc: serviceFillings, 
-      description: 'Выберите на свой вкус одну или несколько начинок из нашего каталога', 
+    { serviceTitle: 'Тематические десерты', 
+      imgSrc: serviceHolidays, 
+      description: 'У нас вы найдете сладости, которые украсят любой праздник ', 
       actionText: 'Посмотреть каталог', 
-      link: '/fillings',
+      link: '/holidays',
       id: 2
     },
     { serviceTitle: 'Уникальный декор', 

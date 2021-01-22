@@ -25,6 +25,7 @@ const App = (props) => {
           <HeaderContainer/>
 
           <main>
+            {/* <button onClick={() => addData()}></button> */}
             <Route exact path='/' render={() => <MainPage />}/>
 
             <Route path='/cakes' render={() => <ProductsListContainer productCategory='cakes' />} />

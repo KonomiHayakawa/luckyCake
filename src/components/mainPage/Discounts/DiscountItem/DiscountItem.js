@@ -4,6 +4,7 @@ import classes from './DiscountItem.module.css'
 import {NavLink} from 'react-router-dom'
 
 const DiscountItem = (props) => {
+
   const classForDiscountLabel = props.isFirstItem ? classes.firstDiscountLabel : classes.secondDiscountLabel
 
   return (

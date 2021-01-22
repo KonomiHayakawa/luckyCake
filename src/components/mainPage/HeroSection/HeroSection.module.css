@@ -10,12 +10,21 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
 }
 
-/* .title {
-  grid-column: 1 / 6;
-} */
+.description {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  width: 80%;
+}
 
+.button {
+  width: 20%;
+}
 
 .carouselArea {
   grid-column: 7 / 13;

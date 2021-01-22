@@ -11,10 +11,10 @@ const HeroSection = (props) => {
         <h1 className={classes.title}>
           Красивейшие торты для любого события
         </h1>
-        <div className={classes.discription}>
+        <p className={classes.description}>
           Приготовим для вас торт, который станет отличным украшением на праздничном столе!
-        </div>
-        <OpenCatalogBtn className={classes.btn} />
+        </p>
+        <OpenCatalogBtn className={classes.button} />
       </div>
 
       <div className={classes.carouselArea}>
