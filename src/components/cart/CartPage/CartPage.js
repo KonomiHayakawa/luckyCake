@@ -1,12 +1,17 @@
 import React from 'react'
 import classes from './CartPage.module.css'
-import MakeOrderForm from './MakeOrderForm/MakeOrderForm'
-import PurchaseItem from './PurchaseItem/PurchaseItem'
 import emptyCart from './../../../img/cart/emptyCart.png'
+import MakeOrderForm from './MakeOrderForm/MakeOrderForm'
+import orderConfirmed from './../../../img/cart/orderConfirmed.svg'
+import PurchaseItem from './PurchaseItem/PurchaseItem'
 
 const CartPage = (props) => {
   if (props.addedProducts.length === 0) {
-    return <EmptyCart />
+    return props.isOrderSended ? (
+      <OrderSended/>
+    ) : (
+      <EmptyCart />
+    )
   }
   return (
     <>
@@ -16,9 +21,9 @@ const CartPage = (props) => {
       {props.addedProducts.map(purchase => {
         return (
           <PurchaseItem
+            addProductToCart={props.addProductToCart}
             key={purchase.id} 
             purchase={purchase}
-            addProductToCart={props.addProductToCart}
             removeFromCart={props.removeFromCart}
           />
         )
@@ -43,6 +48,21 @@ const EmptyCart = () => {
       />
       <div className={classes.emptyCartText}>
         Ваша корзина пока пуста
+      </div>
+    </div>
+  )
+}
+
+const OrderSended = () => {
+  return (
+    <div className={classes.orderConfirmedWrapper}>
+      <img
+        alt='order confirmed'
+        className={classes.orderConfirmed}
+        src={orderConfirmed}
+      />
+      <div className={classes.orderConfirmedText}>
+        Ваш заказ отправлен
       </div>
     </div>
   )

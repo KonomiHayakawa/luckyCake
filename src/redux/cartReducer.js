@@ -17,6 +17,8 @@ const cartReducer = (state = initialState, action) => {
       return {...state, totalCost: action.totalCost}
     case 'SET_IS_CART_INFO_BOX_OPEN': 
       return {...state, isCartInfoBoxOpen: action.isOpen}
+    case 'SET_IS_ORDER_SENDED': 
+      return {...state, isOrderSended: action.isSended}
     default: return state
   }
 }
@@ -24,6 +26,7 @@ const cartReducer = (state = initialState, action) => {
 export const setProducts = (addedProducts) => ({type: 'SET_PRODUCTS', addedProducts})
 export const setTotalCost = (totalCost) => ({type: 'SET_TOTAL_COST', totalCost})
 export const setIsCartInfoBoxOpen = (isOpen) => ({type: 'SET_IS_CART_INFO_BOX_OPEN', isOpen})
+export const setIsOrderSended = (isSended) => ({type: 'SET_IS_ORDER_SENDED', isSended})
 
 export const addProductsToCart = (products) => (dispatch) => {
   const totalCost = calculateTotalCost(products)
