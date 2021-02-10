@@ -1,6 +1,6 @@
 import React from 'react'
-import classes from './OpenCatalogBtb.module.css'
 import {NavLink} from 'react-router-dom'
+import classes from './OpenCatalogBtb.module.css'
 
 const OpenCatalogBtn = (props) => {
   return (

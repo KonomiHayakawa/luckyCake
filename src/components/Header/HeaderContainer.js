@@ -1,7 +1,7 @@
 import React from 'react'
+import {connect} from 'react-redux'
 import Header from './Header'
 import {toggleCallBackPopUp} from './../../redux/appReducer'
-import {connect} from 'react-redux'
 
 const HeaderContainer = (props) => {
   return (
@@ -11,7 +11,6 @@ const HeaderContainer = (props) => {
   )
 }
 
-const mapStateToProps = (state) => ({
-})
+const mapStateToProps = (state) => ({})
 
 export default connect(mapStateToProps, {toggleCallBackPopUp})(HeaderContainer)

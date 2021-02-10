@@ -1,8 +1,8 @@
 import React from 'react'
-import classes from './CallBackForm.module.css'
-import {Formik, Form, Field, ErrorMessage} from 'formik'
-import CallBackBtn from '../../CallBackBtn/CallBackBtn'
 import * as Yup from 'yup'
+import classes from './CallBackForm.module.css'
+import CallBackBtn from '../../CallBackBtn/CallBackBtn'
+import {Formik, Form, Field, ErrorMessage} from 'formik'
 
 const CallBackForm = (props) => {
   const validationSchema = Yup.object({

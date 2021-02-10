@@ -3,10 +3,10 @@
 }
 
 .productsList {
+  column-gap: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: 100%;
-  column-gap: 40px;
-  row-gap: 40px;
   justify-content: space-between;
+  row-gap: 40px;
+  width: 100%;
 }

@@ -1,11 +1,11 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import BackToTop from './BackToTop/BackToTop'
+import CallBackBtn from './../common/CallBackBtn/CallBackBtn'
 import classes from './Footer.module.css'
 import NavigationMenu from './../common/NavigationMenu/NavigationMenu'
-import PhoneNumber from './../common/PhoneNumber/PhoneNumber'
-import CallBackBtn from './../common/CallBackBtn/CallBackBtn'
 import logoLight from './../../img/footer/logoLight.svg'
-import BackToTop from './BackToTop/BackToTop'
-import { NavLink } from 'react-router-dom'
+import PhoneNumber from './../common/PhoneNumber/PhoneNumber'
 
 const Footer = (props) => {
   return (

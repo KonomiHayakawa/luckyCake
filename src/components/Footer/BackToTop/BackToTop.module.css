@@ -1,12 +1,9 @@
 .backToTopWrapper {
   cursor: pointer;
+  transition: all .2s ease-in-out;
   width: 33px;
 }
 
-.backToTopWrapper svg path{
-  fill: pink;
-}
-
-.backToTopWrapper svg:hover {
-  fill:black;
+.backToTopWrapper:hover {
+  transform: scale(1.3);
 }

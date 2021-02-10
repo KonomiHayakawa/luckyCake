@@ -1,42 +1,46 @@
 import './App.css'
-import FooterContainer from './components/Footer/FooterContainer'
-import HeaderContainer from './components/Header/HeaderContainer'
-import {connect} from 'react-redux'
-import CallBackPopUPContainer from './components/common/CallBackPopUP/CallBackPopUpContainer'
-import MainPageDecoration from './components/decoration/MainPageDecoration/MainPageDecoration'
 import {BrowserRouter, Route} from 'react-router-dom'
-import ProductsListContainer from './components/ProductsList/ProductsListContainer'
+import {connect} from 'react-redux'
+import {useEffect} from 'react'
+import {addProductsToCart, setIsCartInfoBoxOpen} from './redux/cartReducer'
+import AboutDecorationContainer from './components/informationPages/AboutDecoration/AboutDecorationContainer'
+import AboutDelivery from './components/informationPages/AboutDelivery/AboutDelivery'
+import CartPageContainer from './components/cart/CartPage/CartPageContainer'
+import CallBackPopUpContainer from './components/common/CallBackPopUp/CallBackPopUpContainer'
+import DecorationContainer from './components/decoration/DecorationContainer'
+import FooterContainer from './components/Footer/FooterContainer'
+import {getAddedProducts} from './queries'
+import HeaderContainer from './components/Header/HeaderContainer'
 import MainPage from './components/mainPage/MainPage'
-import ProductsListDecoration from './components/decoration/ProductsListDecoration/ProductsListDecoration'
+import ProductsListContainer from './components/ProductsList/ProductsListContainer'
 import ScrollToTop from './components/ScrollToTop'
-import InformationCard from './components/InformationCard/InformationCard'
 
 const App = (props) => {
+  useEffect(() => {
+    getAddedProducts()
+      .then(addedProducts => props.addProductsToCart(addedProducts))
+  }, [props])
+
   return (
     <BrowserRouter>
       <ScrollToTop/>
-      {props.isCallBackPopUpOpen && <CallBackPopUPContainer />}
+      {props.isCallBackPopUpOpen && <CallBackPopUpContainer />}
 
       <div className={`appWrapper ${props.isCallBackPopUpOpen ? 'popUpOpened' : null}`}>
-        <Route exact path='/' render={() => <MainPageDecoration />}/>
-        <Route path='/cakes' render={() => <ProductsListDecoration />} />
-
+        <DecorationContainer/>
         <div className='appContent'>
           <HeaderContainer/>
-
           <main>
-            {/* <button onClick={() => addData()}></button> */}
             <Route exact path='/' render={() => <MainPage />}/>
-
             <Route path='/cakes' render={() => <ProductsListContainer productCategory='cakes' />} />
             <Route path='/cupcakes' render={() => <ProductsListContainer productCategory='cupcakes' />} />
             <Route path='/biscuits' render={() => <ProductsListContainer productCategory='biscuits' />} />
             <Route path='/pies' render={() => <ProductsListContainer productCategory='pies' />} />
-
-            <Route path='/aboutDelivery' render={() => <InformationCard path='/aboutDelivery'/>} />
-            <Route path='/aboutDecoration' render={() => <InformationCard path='/aboutDecoration'/>} />
+            {/* <Route path='/holidays' render={() => <ProductsListContainer productFilter='isForHolidays' />} /> */}
+            <Route path='/cart' render={() => <CartPageContainer />} />
+            <Route path='/aboutDelivery' render={() => <AboutDelivery path='/aboutDelivery'/>} />
+            <Route path='/aboutDecoration' render={() => <AboutDecorationContainer path='/aboutDecoration'/>} />
           </main>
-
           <FooterContainer/>
         </div>
       </div>
@@ -48,4 +52,4 @@ const mapStateToProps = (state) => ({
   isCallBackPopUpOpen: state.appReducer.isCallBackPopUpOpen,
 })
 
-export default connect(mapStateToProps,{})(App)
+export default connect(mapStateToProps,{addProductsToCart, setIsCartInfoBoxOpen})(App)

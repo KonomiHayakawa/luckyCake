@@ -1,7 +1,7 @@
 import React from 'react'
+import Carousel from './Carousel/Carousel'
 import classes from './HeroSection.module.css'
 import OpenCatalogBtn from './OpenCatalogBtn/OpenCatalogBtn'
-import Carousel from './Carousel/Carousel'
 
 const HeroSection = (props) => {
   return (

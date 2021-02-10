@@ -1,11 +1,11 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import CallBackBtn from './../common/CallBackBtn/CallBackBtn'
+import CartInfoAreaContainer from '../cart/CartInfoArea/CartInfoAreaContainer'
+import classes from './Header.module.css'
 import logo from './../../img/header/logo.svg'
 import NavigationMenu from './../common/NavigationMenu/NavigationMenu'
-import classes from './Header.module.css'
 import PhoneNumber from './../common/PhoneNumber/PhoneNumber'
-import CallBackBtn from './../common/CallBackBtn/CallBackBtn'
-import CartArea from './CartArea/CartArea'
-import { NavLink } from 'react-router-dom'
 
 const Header = (props) => {
   return (
@@ -36,7 +36,7 @@ const Header = (props) => {
         </div>
       
         <div className={classes.cart}>
-          <CartArea />
+          <CartInfoAreaContainer/>
         </div>
       </div>
     </header>

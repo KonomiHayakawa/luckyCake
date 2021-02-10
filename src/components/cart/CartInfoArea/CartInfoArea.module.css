@@ -1,6 +1,7 @@
-.cartWrapper {
-  display: flex;
+.cartWrapper {  
   align-items: center;
+  cursor: pointer;
+  display: flex;
 }
 
 .cartIcon {
@@ -16,6 +17,6 @@
   margin-right: 15px;
 }
 
-.showMoreArrow {
-  cursor: pointer;
+.showDetailsArrow {
+  width: 13px;
 }

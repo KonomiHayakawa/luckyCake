@@ -1,7 +1,7 @@
 import React from 'react'
+import {connect} from 'react-redux'
 import Footer from './Footer'
 import {toggleCallBackPopUp} from './../../redux/appReducer'
-import {connect} from 'react-redux'
 
 const FooterContainer = (props) => {
   return (

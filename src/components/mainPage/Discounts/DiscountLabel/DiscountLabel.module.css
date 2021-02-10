@@ -1,15 +1,14 @@
 .circle {
-  width: 130px;
-  height: 130px;
-  line-height: 130px;
-  border-radius: 50%;
-  font-size: 25px;
-  color: #fff;
   background-color:  #EC5879;
-
-  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 25px;
   font-weight: 900;
   font-family: Montserrat;
   font-style: normal;
+  height: 130px;
+  line-height: 130px;
+  text-align: center;
   text-transform: uppercase;
+  width: 130px;
 }

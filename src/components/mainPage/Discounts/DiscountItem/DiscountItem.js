@@ -1,18 +1,17 @@
 import React from 'react'
-import DiscountLabel from '../DiscountLabel/DiscountLabel'
-import classes from './DiscountItem.module.css'
 import {NavLink} from 'react-router-dom'
+import classes from './DiscountItem.module.css'
+import DiscountLabel from '../DiscountLabel/DiscountLabel'
 
 const DiscountItem = (props) => {
-
   const classForDiscountLabel = props.isFirstItem ? classes.firstDiscountLabel : classes.secondDiscountLabel
 
   return (
     <NavLink to={props.link} className={classes.discountItemWrapper}>
       <img
-        src={props.imgSrc}
         alt='discountImage'
         className={classes.discountImage}
+        src={props.imgSrc}
       />
       <div className={classes.infoBlock}>
         <h3>

@@ -9,9 +9,9 @@ const ServiceItem = (props) => {
         {props.serviceTitle}
       </div>
       <img 
-        src={props.imgSrc}
         alt='serviceImage'
         className={classes.image}
+        src={props.imgSrc}
       />
       <div className={classes.description}>
         {props.description}

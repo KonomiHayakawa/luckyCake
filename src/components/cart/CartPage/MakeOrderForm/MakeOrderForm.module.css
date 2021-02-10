@@ -1,0 +1,74 @@
+.wrapper {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  justify-content: center;
+  z-index: 10;
+}
+
+.formInput {
+  border: 1px solid #DBA7B3;
+  border-radius: 15px; 
+  background: white !important;
+  color: rgba(0, 0, 0, 0.61); 
+  font-size: 18px;
+  line-height: 100%;
+  margin-bottom: 5px;
+  outline: none; 
+  padding:15px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+}
+
+.formInput:hover {
+  box-shadow: 0px 0px 20px 4px rgba(236, 88, 121, 0.4);
+}      
+
+.errorMessage {
+  color: #EC5879;
+  font-size: 16px;
+  height: 20px;
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 5;
+}
+
+.makeOrderBtn {
+  align-items: center;
+  background-color: #EC5879;
+  border: 1px solid #EC5879;
+  border-radius: 150px;   
+  display: flex;
+  cursor: pointer;
+  color: white;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  height: 70px;
+  justify-content: center;
+  line-height: 15px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 10px 20px 10px 20px;
+  width: 100%;
+}
+
+.makeOrderBtn:hover {
+  background-color: white;
+  color: #EC5879;
+}
+
+.makeOrderBtn:focus {
+  outline: none;
+}

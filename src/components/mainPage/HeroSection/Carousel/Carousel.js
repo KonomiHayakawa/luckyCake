@@ -1,11 +1,11 @@
 import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import cake1 from './../../../../img/mainPage/heroSection/cake1.svg'
 import cake2 from './../../../../img/mainPage/heroSection/cake2.svg'
 import cake3 from './../../../../img/mainPage/heroSection/cake3.svg'
 import classes from './Carousel.module.css'
+import Slider from "react-slick";
 
 const Carousel = (props) => {
   const images = [
@@ -15,14 +15,14 @@ const Carousel = (props) => {
   ]
 
   const settings = {
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 3000,
   } 
 
   return (
@@ -32,8 +32,8 @@ const Carousel = (props) => {
           return (
             <div key={image.id}>
               <img 
-                src={image.src}
                 alt={image.alt}
+                src={image.src}
                 style={{width:'100%', height: 'auto'}}
               /> 
             </div>

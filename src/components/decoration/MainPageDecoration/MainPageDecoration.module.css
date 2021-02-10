@@ -4,8 +4,8 @@
 .circle8,
 .circle9,
 .circle10 {
-  z-index: 1;
   position: absolute;
+  z-index: 1;
 }
 
 .circle5,
@@ -14,8 +14,8 @@
 .circle7,
 .circle11,
 .circle12 {
-  z-index: 15;
   position: absolute;
+  z-index: 15;
 }
 
 .circle1 {
@@ -23,9 +23,9 @@
 }
 
 .circle1Additional {
-  z-index: 2;
-  position: absolute;
   left: 0px;
+  position: absolute;
+  z-index: 2;
 }
 
 .circle2 {
@@ -74,10 +74,10 @@
 
 .circle11 {
   left: 160px;
-  top: 2735px;
+  top: 2755px;
 }
 
 .circle12 {
   right: 0px;
-  top: 2881px;
+  top: 2901px;
 }

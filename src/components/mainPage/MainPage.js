@@ -2,14 +2,14 @@ import React from 'react'
 import DiscountsContainer from './Discounts/DiscountsContainer'
 import HeroSection from './HeroSection/HeroSection'
 import Infographic from './Infographic/Infographic'
-import NewGoods from './NewGoods/NewGoods'
+import NewProductsContainer from './NewProducts/NewProductsContainer'
 import OurServices from './Services/OurServices'
 
 const MainPage = (props) => {
   return (
     <>
       <HeroSection />
-      <NewGoods />
+      <NewProductsContainer />
       <DiscountsContainer />
       <OurServices />
       <Infographic />     

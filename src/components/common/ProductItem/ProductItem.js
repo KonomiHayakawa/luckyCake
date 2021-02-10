@@ -6,18 +6,30 @@ const ProductItem = (props) => {
   return (
     <div className={classes.itemWrapper}>
       <div className={classes.goodTitle}>
-        {props.title}
+        {props.itemData.title}
       </div>
       <img 
-        src={props.imgSrc}
+        src={props.itemData.imgSrc}
         alt='serviceImage'
         className={classes.image}
       />
       <div className={classes.description}>
-        {props.description}
+        {props.itemData.description}
       </div>
-      <div className={classes.actionBtn}>
-        {props.price} грн/{props.weight} {props.unit}
+      <div 
+        className={classes.actionBtn}
+        onClick={() => props.addProductToCart(props.itemData)}
+      >
+        {props.itemData.weight && 
+          <div>
+            {props.itemData.price} грн/{props.itemData.weight}кг
+          </div>
+        }
+        {props.itemData.size && 
+          <div>
+            {props.itemData.price} грн/{props.itemData.size} шт
+          </div>
+        }
         <div className={classes.addToCartIcon}>
           <img 
             src={shoppingCart}

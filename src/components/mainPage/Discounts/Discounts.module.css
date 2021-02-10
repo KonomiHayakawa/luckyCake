@@ -1,6 +1,6 @@
 .discountsWrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   column-gap: 20px;
+  grid-template-columns: 1fr 1fr;
   margin-bottom: 70px;
 }

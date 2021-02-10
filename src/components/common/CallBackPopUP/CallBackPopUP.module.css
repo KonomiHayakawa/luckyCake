@@ -1,32 +1,32 @@
 .wrapper {
-  width:  18%;
+  background-color: #EBD7DC;
+  left: 33%;
   padding-left: 7%;
   padding-right: 7%;
   position: fixed;
-  left: 33%;
-  top: 15%;
-  z-index: 10;
-  background-color: #EBD7DC;
   text-align: center;
+  top: 15%;
+  width:  18%;
+  z-index: 10;
 }
 
 .wrapper h2 {
-  z-index: 5;
   position: relative;
+  z-index: 5;
 }
 
 .closePopUpIcon {
   border: 1px solid #EC5879;
-  padding: 2px 3px;
-  border-radius: 50%;
-  font-size: 16px;
-  width: 16px;
-  color: #EC5879;
-  position: absolute;
-  left: 420px;
-  top: 10px;
+  border-radius: 50%; 
+  color: #EC5879; 
   cursor: pointer;
+  font-size: 16px;
+  left: 420px;
+  padding: 2px 3px;
+  position: absolute;
+  top: 10px;
   transition: transform 0.5s;
+  width: 16px;
 }
 
 .closePopUpIcon:hover {

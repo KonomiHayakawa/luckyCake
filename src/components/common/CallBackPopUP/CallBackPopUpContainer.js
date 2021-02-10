@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import CallBackPopUP from './CallBackPopUP'
+import CallBackPopUp from './CallBackPopUp'
 import {connect} from 'react-redux'
-import {toggleCallBackPopUp} from './../../../redux/appReducer'
 import {requestCallback} from './../../../queries'
+import {toggleCallBackPopUp} from './../../../redux/appReducer'
 import {setError} from './../../../redux/errorsReducer'
 
 const CallBackPopUPContainer = (props) => {
@@ -11,15 +11,11 @@ const CallBackPopUPContainer = (props) => {
   const sendFormData = (formData) => {
     requestCallback(formData)
       .then(toggleSuccessMessage(true))
-      .then(setTimeout(() => {
-        toggleSuccessMessage(false)
-        props.toggleCallBackPopUp()
-      }, 2000))
       .catch(error => props.setError(error))
   }
 
   return (
-    <CallBackPopUP
+    <CallBackPopUp
       toggleCallBackPopUp={props.toggleCallBackPopUp}
       sendFormData={sendFormData}
       successMessage={successMessage}

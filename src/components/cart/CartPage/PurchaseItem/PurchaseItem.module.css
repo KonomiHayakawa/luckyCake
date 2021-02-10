@@ -1,0 +1,38 @@
+.wrapper {
+  align-items: center;
+  display: grid;
+  font-size: 0.9rem;
+  grid-template-columns: 20% 36% 19% 25%;  
+  grid-template-rows: 150px;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.purchaseImage {
+  width: 100%;
+  height: 100%;
+}
+
+.changeAmountIcon {
+  background-color: white;
+  border: 1px solid #EC5879;
+  border-radius: 50px;
+  color: #EC5879;
+  cursor: pointer;
+  font-size: 2rem;
+  width: 50px;
+}
+
+.changeAmountIcon:hover {
+  background-color: #EC5879;
+  color: white;
+}
+
+.amountArea {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

@@ -1,8 +1,8 @@
 .circle1,
 .circle2,
 .circle3 {
-  z-index: 1;
   position: absolute;
+  z-index: 1;
 }
 
 .circle1 {
@@ -10,9 +10,9 @@
 }
 
 .circle1Additional {
-  z-index: 2;
   position: absolute;
   left: 0px;
+  z-index: 2;
 }
 
 .circle2 {

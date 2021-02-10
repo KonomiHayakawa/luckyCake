@@ -1,17 +1,17 @@
 .menu {
-  list-style-type: none;
+  cursor: pointer;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-  margin-left: 0px;
-  padding-left: 0px;
-  cursor: pointer;
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
+  justify-content: space-around;
+  list-style-type: none;
   line-height: 15px;
+  margin-left: 0px;
+  padding-left: 0px;
+  width: 100%;
 }
 
 .darkStyle {
