@@ -13,8 +13,6 @@
 
 .infoValue {
   color: #EA5242; 
-  font-family: Montserrat;
-  font-style: normal;
   font-weight: 900;
   font-size: 48px;
   line-height: 59px;
@@ -22,8 +20,6 @@
 }
 
 .infoTitle {
-  font-family: Montserrat;
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;

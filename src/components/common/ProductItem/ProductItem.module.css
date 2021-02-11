@@ -11,8 +11,6 @@
 
 .goodTitle {
   color: #403D3D;
-  font-family: Montserrat;
-  font-style: normal;
   font-weight: 900;
   font-size: 18px;
   line-height: 22px;
@@ -20,8 +18,6 @@
 }
 
 .description {
-  font-family: Montserrat;
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 150%;
@@ -37,8 +33,6 @@
   color: #EC5879;
   cursor: pointer;
   display: flex;
-  font-family: Montserrat;
-  font-style: normal;
   font-weight: bold;
   font-size: 12px;
   height: 50px;

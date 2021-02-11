@@ -4,7 +4,7 @@ import CallBackBtn from './../common/CallBackBtn/CallBackBtn'
 import CartInfoAreaContainer from '../cart/CartInfoArea/CartInfoAreaContainer'
 import classes from './Header.module.css'
 import logo from './../../img/header/logo.svg'
-import NavigationMenu from './../common/NavigationMenu/NavigationMenu'
+import NavigationMenu from './NavigationMenu/NavigationMenu'
 import PhoneNumber from './../common/PhoneNumber/PhoneNumber'
 
 const Header = (props) => {
@@ -20,7 +20,7 @@ const Header = (props) => {
         </NavLink>
     
         <div className={classes.navigationMenu} >
-          <NavigationMenu textStyle='dark' />
+          <NavigationMenu />
         </div>
 
         <div className={classes.phoneNumber} >

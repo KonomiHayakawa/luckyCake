@@ -3,17 +3,19 @@ import {connect} from 'react-redux'
 import {getProductsByCategory, getProductsByFilter} from './../../queries'
 import ProductsList from './ProductsList'
 import {setError} from './../../redux/errorsReducer'
+import Spinner from '../common/Spinner/Spinner'
 
 const ProductsListContainer = (props) => {
-  const [productsData, setProductsData] = useState({})
+  const [productsData, setProductsData] = useState([])
   const [categoryTitle, setCategoryTitle] = useState('')
-  // console.log(productsData)
+  const [isContentLoaded, setIsContentLoaded] = useState(false)
 
   useEffect(() => {
     getProductsByCategory(props.productCategory)
-    .then(data => setProductsData(data))
-    .catch(error => props.setError(error))
-  }, [props])
+      .then(data => setProductsData(data))
+      .then(() => setIsContentLoaded(true))
+      .catch(error => props.setError(error))
+  }, [props.productCategory])
 
   useEffect(() => {
     switch (props.productCategory) {
@@ -29,14 +31,14 @@ const ProductsListContainer = (props) => {
     }
   }, [props.productCategory])
 
+  if (!isContentLoaded) return <Spinner />
+  
   return (
     <ProductsList 
-      title={categoryTitle}
       productsData={productsData}
+      title={categoryTitle}
     />
   )
 }
 
-const mapStateToProps = (state) => ({})
-
-export default connect(mapStateToProps, {setError})(ProductsListContainer)
+export default connect(null, {setError})(ProductsListContainer)

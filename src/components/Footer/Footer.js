@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom'
 import BackToTop from './BackToTop/BackToTop'
 import CallBackBtn from './../common/CallBackBtn/CallBackBtn'
 import classes from './Footer.module.css'
-import NavigationMenu from './../common/NavigationMenu/NavigationMenu'
 import logoLight from './../../img/footer/logoLight.svg'
 import PhoneNumber from './../common/PhoneNumber/PhoneNumber'
+import FooterMenu from './FooterMenu/FooterMenu'
 
 const Footer = (props) => {
   return (
@@ -19,8 +19,8 @@ const Footer = (props) => {
           />
         </NavLink>
 
-        <div className={classes.navigationMenu} >
-          <NavigationMenu textStyle='light'/>
+        <div className={classes.footerMenu} >
+          <FooterMenu />
         </div>
 
         <div className={classes.backToTop} >

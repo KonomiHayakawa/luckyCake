@@ -10,14 +10,15 @@ const NavigationMenu = (props) => {
     {title: 'Пироги', link: '/pies', id: 4},
   ]
 
-  const textStyle = props.textStyle === 'dark' ? classes.darkStyle : classes.lightStyle
-
   return (
     <ul className={classes.menu}>
       {menuItems.map(item => {
         return (
           <li key={item.id} >
-            <NavLink to={item.link} className={`${textStyle}`}>
+            <NavLink 
+              to={item.link} 
+              className={classes.menuItem}
+            >
               {item.title}
             </NavLink>
           </li>

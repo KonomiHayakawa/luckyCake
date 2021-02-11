@@ -7,8 +7,6 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-family: Montserrat;
-  font-style: normal;
   font-weight: 500;
   justify-content: center;
   z-index: 10;
@@ -51,8 +49,6 @@
   display: flex;
   cursor: pointer;
   color: white;
-  font-family: Montserrat;
-  font-style: normal;
   font-weight: bold;
   font-size: 16px;
   height: 70px;
