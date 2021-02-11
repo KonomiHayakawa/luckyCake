@@ -11,7 +11,4 @@ const FooterContainer = (props) => {
   )
 }
 
-const mapStateToProps = (state) => ({
-})
-
-export default connect(mapStateToProps, {toggleCallBackPopUp})(FooterContainer)
+export default connect(null, {toggleCallBackPopUp})(FooterContainer)

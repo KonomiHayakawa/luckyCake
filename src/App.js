@@ -14,12 +14,17 @@ import HeaderContainer from './components/Header/HeaderContainer'
 import MainPage from './components/mainPage/MainPage'
 import ProductsListContainer from './components/ProductsList/ProductsListContainer'
 import ScrollToTop from './components/ScrollToTop'
+import ErrorPage from './components/ErrorPage/ErrorPage'
 
 const App = (props) => {
   useEffect(() => {
     getAddedProducts()
       .then(addedProducts => props.addProductsToCart(addedProducts))
   }, [props])
+
+  if (props.error) {
+    return <ErrorPage errorMessage={props.errorMessage}/>
+  }
 
   return (
     <BrowserRouter>
@@ -49,6 +54,8 @@ const App = (props) => {
 }
 
 const mapStateToProps = (state) => ({
+  error: state.errorsReducer.error,
+  errorMessage: state.errorsReducer.errorMessage,
   isCallBackPopUpOpen: state.appReducer.isCallBackPopUpOpen,
 })
 

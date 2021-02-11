@@ -11,6 +11,4 @@ const HeaderContainer = (props) => {
   )
 }
 
-const mapStateToProps = (state) => ({})
-
-export default connect(mapStateToProps, {toggleCallBackPopUp})(HeaderContainer)
+export default connect(null, {toggleCallBackPopUp})(HeaderContainer)

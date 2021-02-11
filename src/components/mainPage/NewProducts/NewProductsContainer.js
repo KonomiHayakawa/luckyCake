@@ -18,6 +18,4 @@ const NewProductsContainer = (props) => {
   )
 }
 
-const mapStateToProps = (state) => ({})
-
-export default connect(mapStateToProps, {setError})(NewProductsContainer)
+export default connect(null, {setError})(NewProductsContainer)
