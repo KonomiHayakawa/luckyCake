@@ -18,7 +18,7 @@ const CartPageContainer = (props) => {
 
   const makeOrder = (deliveryData) => {
     try {
-      sendOrder([...props.addedProducts, {...deliveryData}])
+      sendOrder([...props.addedProducts, {...deliveryData, totalCost: props.totalCost}])
         .then(props.setIsOrderSended(true))
         .then(props.clearCart())
         .then(updateLocalStorage([]))
@@ -34,6 +34,7 @@ const CartPageContainer = (props) => {
       removeFromCart={props.removeProductFromCart}
       makeOrder={makeOrder}
       totalCost={props.totalCost}
+      totalCostWithoutDiscount={props.totalCostWithoutDiscount}
       isOrderSended={props.isOrderSended}
     />
   )
@@ -43,6 +44,7 @@ const mapStateToProps = (state) => ({
   addedProducts: state.cartReducer.addedProducts,
   isOrderSended: state.cartReducer.isOrderSended,
   totalCost: state.cartReducer.totalCost,
+  totalCostWithoutDiscount: state.cartReducer.totalCostWithoutDiscount,
 })
 
 export default connect(mapStateToProps, 

@@ -70,9 +70,8 @@ const CallBackForm = (props) => {
               <ErrorMessage name='email' />
             </div>
 
-            <Field
-              name='phoneNumber'
-              render={({ field }) => (
+            <Field name='phoneNumber'>
+              {({ field }) => (
                 <MaskedInput
                   {...field}
                   mask={phoneNumberMask}
@@ -82,7 +81,7 @@ const CallBackForm = (props) => {
                   className={classes.formInput}
                 />
               )}
-            />
+            </Field>
             <div className={classes.errorMessage}>
               <ErrorMessage name='phoneNumber' />
             </div>

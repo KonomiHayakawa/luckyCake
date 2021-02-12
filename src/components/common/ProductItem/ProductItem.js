@@ -1,42 +1,58 @@
 import React from 'react'
 import classes from './ProductItem.module.css'
 import shoppingCart from './../../../img/ProductItem/shoppingCart.svg'
+import sale from './../../../img/sale.png'
 
 const ProductItem = (props) => {
+  const priceIconSrc = props.itemData.newPrice ? sale : shoppingCart
+  const actionBtnClass = props.itemData.newPrice ? `${classes.actionBtn} ${classes.saleBtn}` : classes.actionBtn
   return (
     <div className={classes.itemWrapper}>
       <div className={classes.goodTitle}>
         {props.itemData.title}
       </div>
       <img 
-        src={props.itemData.imgSrc}
         alt='serviceImage'
-        className={classes.image}
+        className={classes.foodPhoto}
+        src={props.itemData.imgSrc}
       />
       <div className={classes.description}>
         {props.itemData.description}
       </div>
       <div 
-        className={classes.actionBtn}
+        // className={classes.actionBtn}
+        className={actionBtnClass}
         onClick={() => props.addProductToCart(props.itemData)}
       >
-        {props.itemData.weight && 
-          <div>
-            {props.itemData.price} грн/{props.itemData.weight}кг
-          </div>
-        }
-        {props.itemData.size && 
-          <div>
-            {props.itemData.price} грн/{props.itemData.size} шт
-          </div>
-        }
-        <div className={classes.addToCartIcon}>
+        
+        <Price itemData={props.itemData}/>
+    
+        <div className={classes.addToCartIconWrap}>
           <img 
-            src={shoppingCart}
             alt='shoppingCart'
+            className={classes.addToCartIcon}
+            src={priceIconSrc}
           />
         </div>
       </div>
+    </div>
+  )
+}
+
+const Price = (props) => {
+  const regularPriceClass = props.itemData.newPrice ? classes.regularPrice : null
+  return (
+    <div> 
+      <div className={regularPriceClass}>
+        {props.itemData.weight && <>{props.itemData.price} грн/{props.itemData.weight}кг</> }
+        {props.itemData.size && <>{props.itemData.price} грн/{props.itemData.size} шт</>}
+      </div>
+      {props.itemData.newPrice &&
+        <div>
+          {props.itemData.weight && <>{props.itemData.newPrice} грн/{props.itemData.weight}кг</>}
+          {props.itemData.size && <>{props.itemData.newPrice} грн/{props.itemData.size} шт</>}
+        </div>
+      }
     </div>
   )
 }

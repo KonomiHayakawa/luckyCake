@@ -14,9 +14,16 @@ export const addProductItem = (addedProducts, newProduct) => {
 export const calculateTotalCost = (addedProducts) => {
   if (addedProducts.length === 0) return 0
 
-  return addedProducts.reduce((sum, product) => {
+  const totalCostWithoutDiscount = addedProducts.reduce((sum, product) => {
     return sum += Number(product.price) * product.amount
   }, 0)
+
+  const totalCost = addedProducts.reduce((sum, product) => {
+    let price = product.newPrice || product.price
+    return sum += Number(price) * product.amount
+  }, 0)
+
+  return ({totalCostWithoutDiscount, totalCost})
 }
 
 export const removeProductItem = (addedProducts, removedItem) => {

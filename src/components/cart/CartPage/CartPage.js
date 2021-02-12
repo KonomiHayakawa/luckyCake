@@ -32,6 +32,11 @@ const CartPage = (props) => {
       <div className={classes.totalCost}>
         Итого: {props.totalCost} грн
       </div>
+      {props.totalCostWithoutDiscount !== props.totalCost &&
+        <div className={classes.discount}> 
+          Вы сэкономили {props.totalCostWithoutDiscount - props.totalCost} грн
+        </div>
+      }
 
       <MakeOrderForm makeOrder={props.makeOrder} />
     </>

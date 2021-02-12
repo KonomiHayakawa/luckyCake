@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './PurchaseItem.module.css'
 
 const PurchaseItem = (props) => {
+
   return (
     <div className={classes.wrapper}>
       <img
@@ -13,10 +14,8 @@ const PurchaseItem = (props) => {
       <div>
         {props.purchase.title} 
       </div>
-
-      <div>
-        {props.purchase.price * props.purchase.amount} грн
-      </div>
+     
+      <PurchasePrice purchase={props.purchase} />
 
       <div className={classes.amountArea}>
         <span 
@@ -39,6 +38,24 @@ const PurchaseItem = (props) => {
           +
         </span>
       </div>
+    </div>
+  )
+}
+
+const PurchasePrice = (props) => {
+  const regularPrice = props.purchase.price * props.purchase.amount
+  const priceWithDiscount = props.purchase.newPrice * props.purchase.amount
+  const regularPriceClass = props.purchase.newPrice ? classes.oldPrice : null
+  return (
+    <div>
+        <div className={regularPriceClass}>
+          {regularPrice} грн
+        </div>
+        {props.purchase.newPrice &&
+        <div className={classes.priceWithDiscount}>
+          {priceWithDiscount} грн
+        </div>
+      }
     </div>
   )
 }

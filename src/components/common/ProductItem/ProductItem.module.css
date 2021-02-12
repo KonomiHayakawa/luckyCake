@@ -17,6 +17,12 @@
   padding-bottom: 0px;
 }
 
+.foodPhoto {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .description {
   font-weight: normal;
   font-size: 14px;
@@ -41,6 +47,7 @@
   opacity: 0.8;
   position: relative;
   text-align: center;
+  transition: all .2s ease-in-out;
   width: 100%;
 }
 
@@ -53,7 +60,7 @@
   background-color: #a13e54;
 }
 
-.addToCartIcon {
+.addToCartIconWrap {
   background-color:  #EC5879;
   bottom: 0px;  
   border-radius: 50%;
@@ -66,7 +73,24 @@
   width: 50px;
 }
 
-.image {
-  height: 100%;
-  width: 100%;
+.addToCartIcon {
+  height: 60%;
+}
+
+.saleBtn {
+  background-color: #EC5879;
+  border: 1px solid #EC5879;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.saleBtn:hover {
+  background-color: #e78ea1;
+  color: white;
+}
+
+.regularPrice {
+  color: rgba(0, 0, 0, 0.521);
+  font-size: 0.7rem;
+  margin-bottom: 7px;
 }

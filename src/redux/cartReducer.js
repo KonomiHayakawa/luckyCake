@@ -3,8 +3,8 @@ import {updateAddedProducts as updateLocalStorage} from './../localStorage'
 
 const initialState = {
   addedProducts: [],
-  totalCostWithDiscount: 0,
   totalCost: 0,
+  totalCostWithoutDiscount: 0,
   isCartInfoBoxOpen: false,
   isOrderSended: false,
 }
@@ -15,6 +15,8 @@ const cartReducer = (state = initialState, action) => {
       return {...state, addedProducts: action.addedProducts}
     case 'SET_TOTAL_COST': 
       return {...state, totalCost: action.totalCost}
+    case 'SET_TOTAL_COST_WITHOUT_DISCOUNT': 
+      return {...state, totalCostWithoutDiscount: action.costWithoutDiscount}
     case 'SET_IS_CART_INFO_BOX_OPEN': 
       return {...state, isCartInfoBoxOpen: action.isOpen}
     case 'SET_IS_ORDER_SENDED': 
@@ -25,30 +27,34 @@ const cartReducer = (state = initialState, action) => {
 
 export const setProducts = (addedProducts) => ({type: 'SET_PRODUCTS', addedProducts})
 export const setTotalCost = (totalCost) => ({type: 'SET_TOTAL_COST', totalCost})
+export const setTotalCostWithoutDiscount = (costWithoutDiscount) => ({type: 'SET_TOTAL_COST_WITHOUT_DISCOUNT', costWithoutDiscount})
 export const setIsCartInfoBoxOpen = (isOpen) => ({type: 'SET_IS_CART_INFO_BOX_OPEN', isOpen})
 export const setIsOrderSended = (isSended) => ({type: 'SET_IS_ORDER_SENDED', isSended})
 
 export const addProductsToCart = (products) => (dispatch) => {
-  const totalCost = calculateTotalCost(products)
+  const costData = calculateTotalCost(products)
   dispatch(setProducts(products))
-  dispatch(setTotalCost(totalCost))
+  dispatch(setTotalCost(costData.totalCost))
+  dispatch(setTotalCostWithoutDiscount(costData.totalCostWithoutDiscount))
 }
 
 export const addNewProductToCart = (newProductItem) => (dispatch, getState) => {
   const addedProducts = getState().cartReducer.addedProducts
   const addedProductsUpdated = addProductItem(addedProducts, newProductItem)
-  const totalCost = calculateTotalCost(addedProductsUpdated)
+  const costData = calculateTotalCost(addedProductsUpdated)
   dispatch(setProducts(addedProductsUpdated))
-  dispatch(setTotalCost(totalCost))
+  dispatch(setTotalCost(costData.totalCost))
+  dispatch(setTotalCostWithoutDiscount(costData.totalCostWithoutDiscount))
   updateLocalStorage(addedProductsUpdated)
 }
 
 export const removeProductFromCart = (productItem) => (dispatch, getState) => {
   const addedProducts = getState().cartReducer.addedProducts
   const addedProductsUpdated = removeProductItem(addedProducts, productItem)
-  const totalCost = calculateTotalCost(addedProductsUpdated)
+  const costData = calculateTotalCost(addedProductsUpdated)
   dispatch(setProducts(addedProductsUpdated))
-  dispatch(setTotalCost(totalCost))
+  dispatch(setTotalCost(costData.totalCost))
+  dispatch(setTotalCostWithoutDiscount(costData.totalCostWithoutDiscount))
   updateLocalStorage(addedProductsUpdated)
 }
 
