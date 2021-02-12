@@ -4,11 +4,12 @@ import {getProductsByCategory, getProductsByFilter} from './../../queries'
 import ProductsList from './ProductsList'
 import {setError} from './../../redux/errorsReducer'
 import Spinner from '../common/Spinner/Spinner'
+import {sortByPriceIncrease, sortByPriceDecrease, sortBySizeIncrease, sortBySizeDecrease} from './ProductsListHelper'
 
 const ProductsListContainer = (props) => {
   const [productsData, setProductsData] = useState([])
-  const [categoryTitle, setCategoryTitle] = useState('')
   const [isContentLoaded, setIsContentLoaded] = useState(false)
+  const [activeSort, setActiveSort] = useState('')
 
   useEffect(() => {
     getProductsByCategory(props.productCategory)
@@ -17,26 +18,34 @@ const ProductsListContainer = (props) => {
       .catch(error => props.setError(error))
   }, [props.productCategory])
 
-  useEffect(() => {
-    switch (props.productCategory) {
-      case 'cakes': setCategoryTitle('Торты')
-      break;
-      case 'cupcakes': setCategoryTitle('Капкейки')
-      break;
-      case 'biscuits': setCategoryTitle('Печенье')
-      break;
-      case 'pies': setCategoryTitle('Пироги')
-      break;
-      default: return setCategoryTitle('Наши десерты')
+  const sortProducts = (sortType) => {
+    const sortTypes = {
+      'sortByPriceIncrease': sortByPriceIncrease, 
+      'sortByPriceDecrease': sortByPriceDecrease, 
+      'sortBySizeIncrease': sortBySizeIncrease, 
+      'sortBySizeDecrease': sortBySizeDecrease,
     }
-  }, [props.productCategory])
+    const productsDataCopy = [...productsData]
+    const sortedData = productsDataCopy.sort((a, b) => sortTypes[sortType](a, b))
+    setProductsData(sortedData)
+    setActiveSort(sortType)
+  }
+
+  const titles = {
+     'cakes': 'Торты',
+     'cupcakes': 'Капкейки',
+     'biscuits': 'Печенье',
+     'pies': 'Пироги',
+  }
 
   if (!isContentLoaded) return <Spinner />
   
   return (
     <ProductsList 
       productsData={productsData}
-      title={categoryTitle}
+      activeSort={activeSort}
+      sortProducts={sortProducts}
+      title={titles[props.productCategory]}
     />
   )
 }

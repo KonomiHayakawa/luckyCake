@@ -1,6 +1,6 @@
 import React from 'react'
-import classes from './NavigationMenu.module.css'
 import {NavLink} from 'react-router-dom'
+import classes from './NavigationMenu.module.css'
 
 const NavigationMenu = (props) => {
   const menuItems = [
@@ -14,10 +14,10 @@ const NavigationMenu = (props) => {
     <ul className={classes.menu}>
       {menuItems.map(item => {
         return (
-          <li key={item.id} >
+          <li key={item.id}>
             <NavLink 
-              to={item.link} 
               className={classes.menuItem}
+              to={item.link} 
             >
               {item.title}
             </NavLink>

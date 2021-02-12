@@ -2,6 +2,12 @@
   margin-bottom: 85px;
 }
 
+.infoWrapper {
+  align-items: center;
+  display: inline-flex;
+  width: 100%;
+}
+
 .productsList {
   column-gap: 40px;
   display: grid;
@@ -9,4 +15,20 @@
   justify-content: space-between;
   row-gap: 40px;
   width: 100%;
+}
+
+.sortWrapper {
+  cursor: pointer;
+  display: flex;
+  font-size: 0.8rem;
+  justify-content: space-around;
+  width: 70%;
+}
+
+.sortOption:hover {
+  color: #EA5242;
+}
+
+.activeSort {
+  color: #EA5242;
 }

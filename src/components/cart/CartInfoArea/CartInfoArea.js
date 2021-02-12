@@ -1,8 +1,8 @@
 import React from 'react'
 import cartIcon from './../../../img/cart/cart-icon.svg'
 import classes from './CartInfoArea.module.css'
-import hideDetailsArrow from './../../../img/cart/hideDetailsArrow.svg'
-import showDetailsArrow from './../../../img/cart/showDetailsArrow.svg'
+import hideDetailsArrow from './../../../img/common/hideDetailsArrow.svg'
+import showDetailsArrow from './../../../img/common/showDetailsArrow.svg'
 import PurchaseBoxContainer from './PurchaseBox/PurchaseBoxContainer'
 
 const CartInfoArea = (props) => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './ProductItem.module.css'
 import shoppingCart from './../../../img/ProductItem/shoppingCart.svg'
-import sale from './../../../img/sale.png'
+import sale from './../../../img/ProductItem/sale.png'
 
 const ProductItem = (props) => {
   const priceIconSrc = props.itemData.newPrice ? sale : shoppingCart
