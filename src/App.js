@@ -1,7 +1,7 @@
-import './App.css'
 import {BrowserRouter, Route} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
+import './App.css'
 import {addProductsToCart, setIsCartInfoBoxOpen} from './redux/cartReducer'
 import AboutDecorationContainer from './components/informationPages/AboutDecoration/AboutDecorationContainer'
 import AboutDelivery from './components/informationPages/AboutDelivery/AboutDelivery'
@@ -14,16 +14,24 @@ import HeaderContainer from './components/Header/HeaderContainer'
 import MainPage from './components/mainPage/MainPage'
 import ProductsListContainer from './components/ProductsList/ProductsListContainer'
 import ScrollToTop from './components/ScrollToTop'
+import {setError} from './redux/errorsReducer'
 import ErrorPage from './components/ErrorPage/ErrorPage'
+import Spinner from './components/common/Spinner/Spinner'
 
 const App = (props) => {
+  const [isContentLoaded, setIsContentLoaded] = useState(false)
+
   useEffect(() => {
     getAddedProducts()
       .then(addedProducts => props.addProductsToCart(addedProducts))
+      .then(() => setIsContentLoaded(true))
+      .catch((error) => props.setError(error))
   }, [props])
 
   if (props.error) {
     return <ErrorPage errorMessage={props.errorMessage}/>
+  } else if (!isContentLoaded) {
+    return <Spinner />
   }
 
   return (
@@ -59,4 +67,4 @@ const mapStateToProps = (state) => ({
   isCallBackPopUpOpen: state.appReducer.isCallBackPopUpOpen,
 })
 
-export default connect(mapStateToProps,{addProductsToCart, setIsCartInfoBoxOpen})(App)
+export default connect(mapStateToProps,{addProductsToCart, setIsCartInfoBoxOpen, setError})(App)

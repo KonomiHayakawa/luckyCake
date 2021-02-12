@@ -1,8 +1,9 @@
 import React from 'react'
+import {Formik, Form, Field, ErrorMessage} from 'formik'
+import MaskedInput from 'react-text-mask'
 import * as Yup from 'yup'
 import classes from './CallBackForm.module.css'
 import CallBackBtn from '../../CallBackBtn/CallBackBtn'
-import {Formik, Form, Field, ErrorMessage} from 'formik'
 
 const CallBackForm = (props) => {
   const validationSchema = Yup.object({
@@ -14,8 +15,6 @@ const CallBackForm = (props) => {
       .email('Некорректный адрес'),
     phoneNumber: Yup.string()
       .required('Не пропускай это поле!')
-      .matches(/^\d+$/, 'Допускаются только цифры!')
-      .min(10, 'Номер состоит из 10 символов!'),
   })
   
   const initialValues = {
@@ -23,6 +22,24 @@ const CallBackForm = (props) => {
     email: '',
     phoneNumber: '',
   }
+
+  const phoneNumberMask = [
+    "(",
+    /[0-9]/,
+    /\d/,
+    /\d/,
+    ")",
+    " ",
+    /\d/,
+    /\d/,
+    /\d/,
+    "-",
+    /\d/,
+    /\d/,
+    "-",
+    /\d/,
+    /\d/
+  ]
   
   const onSubmit = (formData) => {
     props.sendFormData(formData)
@@ -53,12 +70,18 @@ const CallBackForm = (props) => {
               <ErrorMessage name='email' />
             </div>
 
-            <Field 
+            <Field
               name='phoneNumber'
-              type='tel' 
-              placeholder='Телефон'
-              maxLength='10'
-              className={classes.formInput}
+              render={({ field }) => (
+                <MaskedInput
+                  {...field}
+                  mask={phoneNumberMask}
+                  id='phoneNumber'
+                  placeholder='Номер телефона'
+                  type='text'
+                  className={classes.formInput}
+                />
+              )}
             />
             <div className={classes.errorMessage}>
               <ErrorMessage name='phoneNumber' />

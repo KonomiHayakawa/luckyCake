@@ -46,8 +46,7 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps, 
-  {
-    addNewProductToCart, 
+  { addNewProductToCart, 
     clearCart,
     removeProductFromCart, 
     setIsOrderSended,

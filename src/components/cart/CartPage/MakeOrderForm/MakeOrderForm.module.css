@@ -28,6 +28,11 @@
   z-index: 10;
 }
 
+.deliverySelect {
+  width: 110%;
+  text-align-last:center; 
+}
+
 .formInput:hover {
   box-shadow: 0px 0px 20px 4px rgba(236, 88, 121, 0.4);
 }      
