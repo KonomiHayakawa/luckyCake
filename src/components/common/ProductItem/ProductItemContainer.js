@@ -6,8 +6,8 @@ import {addNewProductToCart} from './../../../redux/cartReducer'
 const ProductItemContainer = (props) => {
   return (
     <ProductItem 
-      itemData={props.itemData} 
       addProductToCart={props.addNewProductToCart}
+      itemData={props.itemData} 
     />
   )
 }

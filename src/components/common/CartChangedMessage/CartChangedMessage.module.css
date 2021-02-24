@@ -1,0 +1,31 @@
+.wrapper {
+  align-items: center;
+  animation: fadeOut 5s linear forwards;
+  background-color: white;
+  border: 1px solid #EC5879;
+  border-radius: 15px;
+  bottom: 0px;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  padding: 10px;
+  position: sticky;
+  left: 0px;
+  text-align: center;
+  width: 300px;
+}
+
+@keyframes fadeOut {
+  0%  { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; transform: translateY(0px);}
+  99% { opacity: 0; transform: translateY(-30px);}
+  100% { opacity: 0; }
+ }
+
+
+@media screen and (max-width:1000px) {
+  .wrapper {
+    margin: 0 auto;
+  }
+}

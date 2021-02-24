@@ -20,7 +20,6 @@ const ProductItem = (props) => {
         {props.itemData.description}
       </div>
       <div 
-        // className={classes.actionBtn}
         className={actionBtnClass}
         onClick={() => props.addProductToCart(props.itemData)}
       >

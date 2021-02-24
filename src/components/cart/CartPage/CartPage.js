@@ -4,6 +4,7 @@ import emptyCart from './../../../img/cart/emptyCart.png'
 import MakeOrderForm from './MakeOrderForm/MakeOrderForm'
 import orderConfirmed from './../../../img/cart/orderConfirmed.svg'
 import PurchaseItem from './PurchaseItem/PurchaseItem'
+import CartChangedMessage from '../../common/CartChangedMessage/CartChangedMessage'
 
 const CartPage = (props) => {
   if (props.addedProducts.length === 0) {
@@ -39,6 +40,8 @@ const CartPage = (props) => {
       }
 
       <MakeOrderForm makeOrder={props.makeOrder} />
+
+      {props.lastCartChange[0] !== false && <CartChangedMessage lastCartChange={props.lastCartChange}/>}
     </>
   )
 }

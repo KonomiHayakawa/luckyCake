@@ -42,12 +42,17 @@ const ProductsListContainer = (props) => {
   
   return (
     <ProductsList 
-      productsData={productsData}
       activeSort={activeSort}
+      lastCartChange={props.lastCartChange}
+      productsData={productsData}
       sortProducts={sortProducts}
       title={titles[props.productCategory]}
     />
   )
 }
 
-export default connect(null, {setError})(ProductsListContainer)
+const mapStateToProps = (state) => ({
+  lastCartChange: state.cartReducer.lastCartChange,
+})
+
+export default connect(mapStateToProps, {setError})(ProductsListContainer)

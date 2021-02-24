@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './NewProducts.module.css'
+import CartChangedMessage from '../../common/CartChangedMessage/CartChangedMessage'
 import ProductItemContainer from '../../common/ProductItem/ProductItemContainer'
 
 const NewProducts = (props) => {
@@ -18,6 +19,7 @@ const NewProducts = (props) => {
           )
         })}
       </div>
+      {props.lastCartChange[0] !== false && <CartChangedMessage lastCartChange={props.lastCartChange}/>}
     </div>
   )
 }

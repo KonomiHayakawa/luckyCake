@@ -14,8 +14,15 @@ const NewProductsContainer = (props) => {
   },[props])
 
   return (
-    <NewProducts products={products}/>
+    <NewProducts 
+      lastCartChange={props.lastCartChange}
+      products={products}
+    />
   )
 }
 
-export default connect(null, {setError})(NewProductsContainer)
+const mapStateToProps = (state) => ({
+  lastCartChange: state.cartReducer.lastCartChange,
+})
+
+export default connect(mapStateToProps, {setError})(NewProductsContainer)
