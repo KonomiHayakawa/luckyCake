@@ -35,7 +35,6 @@ const CartPageContainer = (props) => {
       makeOrder={makeOrder}
       totalCost={props.totalCost}
       totalCostWithoutDiscount={props.totalCostWithoutDiscount}
-      lastCartChange={props.lastCartChange}
       isOrderSended={props.isOrderSended}
     />
   )
@@ -43,7 +42,6 @@ const CartPageContainer = (props) => {
 
 const mapStateToProps = (state) => ({
   addedProducts: state.cartReducer.addedProducts,
-  lastCartChange: state.cartReducer.lastCartChange,
   isOrderSended: state.cartReducer.isOrderSended,
   totalCost: state.cartReducer.totalCost,
   totalCostWithoutDiscount: state.cartReducer.totalCostWithoutDiscount,

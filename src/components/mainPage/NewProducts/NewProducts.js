@@ -19,7 +19,7 @@ const NewProducts = (props) => {
           )
         })}
       </div>
-      {props.lastCartChange[0] !== false && <CartChangedMessage lastCartChange={props.lastCartChange}/>}
+      {props.lastCartChange && <CartChangedMessage lastCartChange={props.lastCartChange}/>}
     </div>
   )
 }

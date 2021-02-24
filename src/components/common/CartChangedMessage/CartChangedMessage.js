@@ -2,10 +2,10 @@ import React from 'react'
 import classes from './CartChangedMessage.module.css'
 
 const CartChangedMessage = (props) => {
-  const action = props.lastCartChange[0] === 'removeItem' ? 'товар удален': 'товар добавлен'
+  const action = props.lastCartChange
   return (
     <div className={classes.wrapper}>
-      {props.lastCartChange[1].title} - {action}
+      {props.lastCartChange.title} - товар добавлен
     </div>
   )
 }

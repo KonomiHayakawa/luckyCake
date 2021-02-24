@@ -7,7 +7,7 @@ const initialState = {
   totalCostWithoutDiscount: 0,
   isCartInfoBoxOpen: false,
   isOrderSended: false,
-  lastCartChange: [false, null],
+  lastCartChange: null,
 }
 
 const cartReducer = (state = initialState, action) => {
@@ -23,7 +23,7 @@ const cartReducer = (state = initialState, action) => {
     case 'SET_IS_ORDER_SENDED': 
       return {...state, isOrderSended: action.isSended}
     case 'SET_LAST_CART_CHANGE': 
-      return {...state, lastCartChange: [action.changeType, action.product]}
+      return {...state, lastCartChange: action.product}
     default: return state
   }
 }
@@ -33,7 +33,7 @@ export const setTotalCost = (totalCost) => ({type: 'SET_TOTAL_COST', totalCost})
 export const setTotalCostWithoutDiscount = (costWithoutDiscount) => ({type: 'SET_TOTAL_COST_WITHOUT_DISCOUNT', costWithoutDiscount})
 export const setIsCartInfoBoxOpen = (isOpen) => ({type: 'SET_IS_CART_INFO_BOX_OPEN', isOpen})
 export const setIsOrderSended = (isSended) => ({type: 'SET_IS_ORDER_SENDED', isSended})
-export const setLastCartChange = (product, changeType ) => ({type: 'SET_LAST_CART_CHANGE', product, changeType })
+export const setLastCartChange = (product) => ({type: 'SET_LAST_CART_CHANGE', product})
 
 export const addProductsToCart = (products) => (dispatch) => {
   const costData = calculateTotalCost(products)
@@ -46,8 +46,8 @@ export const addNewProductToCart = (newProductItem) => (dispatch, getState) => {
   const addedProducts = getState().cartReducer.addedProducts
   const addedProductsUpdated = addProductItem(addedProducts, newProductItem)
   const costData = calculateTotalCost(addedProductsUpdated)
-  dispatch(setLastCartChange(newProductItem, 'addItem'))
-  setTimeout(() => dispatch(setLastCartChange(null, false)), 3000)
+  dispatch(setLastCartChange(newProductItem))
+  setTimeout(() => dispatch(setLastCartChange(null)), 3000)
   dispatch(setProducts(addedProductsUpdated))
   dispatch(setTotalCost(costData.totalCost))
   dispatch(setTotalCostWithoutDiscount(costData.totalCostWithoutDiscount))
@@ -58,8 +58,6 @@ export const removeProductFromCart = (productItem) => (dispatch, getState) => {
   const addedProducts = getState().cartReducer.addedProducts
   const addedProductsUpdated = removeProductItem(addedProducts, productItem)
   const costData = calculateTotalCost(addedProductsUpdated)
-  dispatch(setLastCartChange(productItem, 'removeItem'))
-  setTimeout(() => dispatch(setLastCartChange(null, false)), 3000)
   dispatch(setProducts(addedProductsUpdated))
   dispatch(setTotalCost(costData.totalCost))
   dispatch(setTotalCostWithoutDiscount(costData.totalCostWithoutDiscount))

@@ -9,10 +9,11 @@
   height: 100px;
   justify-content: center;
   padding: 10px;
-  position: sticky;
+  position: fixed;
   left: 0px;
   text-align: center;
   width: 300px;
+  z-index: 110;
 }
 
 @keyframes fadeOut {

@@ -40,8 +40,6 @@ const CartPage = (props) => {
       }
 
       <MakeOrderForm makeOrder={props.makeOrder} />
-
-      {props.lastCartChange[0] !== false && <CartChangedMessage lastCartChange={props.lastCartChange}/>}
     </>
   )
 }
