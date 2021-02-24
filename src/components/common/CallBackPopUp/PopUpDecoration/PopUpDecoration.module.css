@@ -1,0 +1,27 @@
+.circle1,
+.circle2,
+.circle3,
+.circle4{
+  position: absolute;
+  z-index: 1;
+}
+
+.circle1 {
+  left: 0px;
+  top: 0px;
+}
+
+.circle2 {
+  right: -23px;
+  top: 145px;
+}
+
+.circle3 {
+  left: 300px;
+  top: 265px;
+}
+
+.circle4 {
+  bottom: 0px;
+  left: 0px;
+}
