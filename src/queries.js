@@ -26,18 +26,16 @@ export const requestCallback = (formData) => {
 
 // Products
 
-export const getProductsByCategory = (productCategory) => {
+export const getProducts = (productCategory, queryParameter) => {
   const products = []
-  const docRef = db.collection('products').where('category', '==', productCategory).orderBy('id')
-  return docRef.get().then((querySnaphot) => {
-    querySnaphot.forEach((doc) => products.push(doc.data()))
-  }).then(() => products)
-}
-
-export const getNewProducts = () => {
-  const products = []
-  const docRef = db.collection('products').where('isNew', '==', 'true').orderBy('id')
-  return docRef.get().then((querySnaphot) => {
+  let query = db.collection('products')
+  if (productCategory) {
+    query = query.where('category', '==', productCategory)
+  }
+  if (queryParameter) {
+    query = query.where(queryParameter, '==', 'true')
+  }
+  return query.orderBy('id').get().then((querySnaphot) => {
     querySnaphot.forEach((doc) => products.push(doc.data()))
   }).then(() => products)
 }
@@ -69,12 +67,3 @@ export const sendOrder = (order) => {
   const orderId = uuidv4()
   return db.collection('orders').doc(orderId).set({...order})
 }
-
-
-
-// export const addData = () => {
-//   kek.map(el => {
-//     const newId = uuidv4()
-//     db.collection('products').doc(newId).set({...el, id: newId})
-//   }) 
-// }

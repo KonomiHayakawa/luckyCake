@@ -13,7 +13,6 @@ import {getAddedProducts} from './queries'
 import HeaderContainer from './components/Header/HeaderContainer'
 import MainPage from './components/mainPage/MainPage'
 import ProductsListContainer from './components/ProductsList/ProductsListContainer'
-import ScrollToTop from './components/ScrollToTop'
 import {setError} from './redux/errorsReducer'
 import ErrorPage from './components/ErrorPage/ErrorPage'
 import Spinner from './components/common/Spinner/Spinner'
@@ -36,7 +35,6 @@ const App = (props) => {
 
   return (
     <BrowserRouter>
-      <ScrollToTop/>
       {props.isCallBackPopUpOpen && <CallBackPopUpContainer />}
 
       <div className={`appWrapper ${props.isCallBackPopUpOpen ? 'popUpOpened' : null}`}>
@@ -49,7 +47,7 @@ const App = (props) => {
             <Route path='/cupcakes' render={() => <ProductsListContainer productCategory='cupcakes' />} />
             <Route path='/biscuits' render={() => <ProductsListContainer productCategory='biscuits' />} />
             <Route path='/pies' render={() => <ProductsListContainer productCategory='pies' />} />
-            {/* <Route path='/holidays' render={() => <ProductsListContainer productFilter='isForHolidays' />} /> */}
+            <Route path='/holidays' render={() => <ProductsListContainer queryParameter='isForHolidays' />} />
             <Route path='/cart' render={() => <CartPageContainer />} />
             <Route path='/aboutDelivery' render={() => <AboutDelivery path='/aboutDelivery'/>} />
             <Route path='/aboutDecoration' render={() => <AboutDecorationContainer path='/aboutDecoration'/>} />

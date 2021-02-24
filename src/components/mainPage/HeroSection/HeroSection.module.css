@@ -31,3 +31,20 @@
   width: 100%;
   z-index: 5;
 }
+
+@media screen and (max-width:1000px) {
+  .heroSectionWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .infoArea {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .description,
+  .button {
+    width: 100%;
+  }
+}

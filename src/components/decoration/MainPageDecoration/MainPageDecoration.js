@@ -3,7 +3,7 @@ import classes from './MainPageDecoration.module.css'
 
 const MainPageDecoration = () => {
   return (
-    <>
+    <div className={classes.wrapper}>
       <svg className={classes.circle1} width="384" height="422" viewBox="0 0 474 502" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="152.744" cy="180.492" r="320.611" fill="#DBA7B3"/>
       </svg>
@@ -55,7 +55,7 @@ const MainPageDecoration = () => {
       <svg className={classes.circle12} width="124" height="125" viewBox="0 0 154 155" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle opacity="0.75" cx="93.5917" cy="92.8552" r="90.76" stroke="#FBF2F2" strokeWidth="4"/>
       </svg>
-    </>
+    </div>
   )
 }
 

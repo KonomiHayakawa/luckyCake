@@ -39,3 +39,18 @@
 .orderConfirmed {
   width: 35%;
 }
+
+@media screen and (max-width:1000px) {
+  .emptyCartText,
+  .orderConfirmedText {
+    text-align: center;
+  }
+
+  .emptyCartImg {
+    width: 40%;
+  }
+
+  .orderConfirmed {
+    width: 55%;
+  }
+}

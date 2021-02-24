@@ -43,3 +43,12 @@
   text-decoration: line-through;
   color: #6e6a6b;
 }
+
+@media screen and (max-width:1000px) {
+  .wrapper {
+    background-color: #dba7b35e;
+    border: 1px solid #dba7b3;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+}

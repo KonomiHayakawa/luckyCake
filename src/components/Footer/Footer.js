@@ -11,7 +11,7 @@ const Footer = (props) => {
   return (
     <footer className={classes.footer}>
       <div className={classes.footerWrapper}>
-        <NavLink to={'/'}>
+        <NavLink to={'/'} className={classes.navLink}>
           <img 
             src={logoLight}  
             alt='logo'

@@ -73,3 +73,9 @@
 .makeOrderBtn:focus {
   outline: none;
 }
+
+@media screen and (max-width:1000px) {
+  .wrapper {
+    width: 80%;
+  }
+}

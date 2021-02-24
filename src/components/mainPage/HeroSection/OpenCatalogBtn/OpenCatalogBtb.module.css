@@ -29,3 +29,10 @@
   border: 1px solid #EC5879;
   color: #EC5879;
 }
+
+@media screen and (max-width:1000px) {
+  .openCatalogLink {
+    display: flex;
+    justify-content: center;
+  }
+}

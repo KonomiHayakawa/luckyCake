@@ -24,3 +24,17 @@
   font-size: 14px;
   line-height: 17px;
 }
+
+@media screen and (max-width:1000px) {
+  .infographicContent {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .infoItem {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    text-align: left;
+  }
+
+}

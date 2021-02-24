@@ -81,3 +81,9 @@
   right: 0px;
   top: 2901px;
 }
+
+@media screen and (max-width:1000px) {
+  .wrapper {
+    display: none;
+  }
+}

@@ -10,13 +10,16 @@ const NavigationMenu = (props) => {
     {title: 'Пироги', link: '/pies', id: 4},
   ]
 
+  const wrapperClass = props.isForMobile ? classes.mobileMenuWrap : classes.menuWrap
+  const itemClass = props.isForMobile ? classes.mobileMenuItem : classes.menuItem
+
   return (
-    <ul className={classes.menu}>
+    <ul className={wrapperClass}>
       {menuItems.map(item => {
         return (
           <li key={item.id}>
             <NavLink 
-              className={classes.menuItem}
+              className={itemClass}
               to={item.link} 
             >
               {item.title}

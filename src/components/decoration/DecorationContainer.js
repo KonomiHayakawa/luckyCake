@@ -5,13 +5,10 @@ import { useLocation } from "react-router-dom"
 
 const DecorationContainer = (props) => {
   const { pathname } = useLocation()
-
-  const productCategories = pathname === '/cakes' || '/cupcakes' || '/biscuits' || '/pies'
   
   return (
     <>
-      {pathname === '/' && <MainPageDecoration/>}
-      {productCategories && <ProductsListDecoration />}
+      {pathname === '/' ? <MainPageDecoration/> : <ProductsListDecoration />}
     </>
   )
 }

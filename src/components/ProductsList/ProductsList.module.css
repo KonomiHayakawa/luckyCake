@@ -25,10 +25,30 @@
   width: 70%;
 }
 
-.sortOption:hover {
+.sortOption:hover,
+.activeSort {
   color: #EA5242;
 }
 
-.activeSort {
-  color: #EA5242;
+@media screen and (max-width:1000px) {
+  .productsList {
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .sortWrapper {
+    column-gap: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5px;
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  .sortOption {
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.644);
+    display: flex;
+  }
 }

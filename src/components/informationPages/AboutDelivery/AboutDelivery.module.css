@@ -18,3 +18,9 @@
   transition: all .2s ease-in-out;
   width: 40px;
 }
+
+@media screen and (max-width:1000px) {
+  .wrapper {
+    width: 80%;
+  }
+}

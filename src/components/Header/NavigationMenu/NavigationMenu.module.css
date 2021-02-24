@@ -1,4 +1,4 @@
-.menu {
+.menuWrap {
   cursor: pointer;
   display: flex;
   flex-direction: row;
@@ -18,5 +18,39 @@
 }
 
 .menuItem:hover {
+  color: #EA5242;
+}
+
+.mobileMenuWrap {
+  display: flex;
+  flex-direction: column;
+  font-weight: normal;
+  font-size: 12px;
+  /* justify-content: space-around; */
+  list-style-type: none;
+  line-height: 15px;
+  margin-left: 0px;
+  padding-left: 0px;
+  /* width: 100%; */
+
+  width: 40%;
+  background-color: rgba(128, 128, 128, 0.952);
+  height: 20vh;
+  z-index: 30;
+  position: absolute;
+  top: 70px;
+  right: 0px;
+  font-size: 1.3rem;
+  padding: 6px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.mobileMenuItem {
+  color: white;
+  text-decoration: none;
+}
+
+.mobileMenuItem:active {
   color: #EA5242;
 }

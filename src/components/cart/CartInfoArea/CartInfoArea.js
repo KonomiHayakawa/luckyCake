@@ -6,6 +6,7 @@ import showDetailsArrow from './../../../img/common/showDetailsArrow.svg'
 import PurchaseBoxContainer from './PurchaseBox/PurchaseBoxContainer'
 
 const CartInfoArea = (props) => {
+  // console.log(props)
   return (
     <div className={classes.wrapper}>
 

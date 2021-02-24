@@ -22,5 +22,22 @@
 }
 
 .productImg:hover {
-  transform: scale(1.7, 1.7);
+  transform: scale(1.2, 1.2);
+}
+
+@media screen and (max-width:1000px) {
+  .infoWrapper {
+    width: 100%;
+  }
+  
+
+  .galleryWrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .productImg {
+    height: 150px;
+    margin: 0 auto;
+    width: 150px;
+  }
 }

@@ -33,3 +33,48 @@
 .callBack {
   grid-column: 11 / 13;
 }
+
+@media screen and (max-width:1000px) {
+  .footer {
+    height: 400px;
+  }
+
+  .footerWrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .logo {
+    grid-column: 1 / 2;
+  }
+  
+  .navLink {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footerMenu {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  
+  .backToTop {
+    display: flex;
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    justify-content: center;
+  }
+  
+  .phoneNumber {
+    grid-column: 1 / 2;
+  }
+  
+  .callBack {
+    display: flex;
+    grid-column: 1 / 2;
+    justify-content: center;
+  }
+}

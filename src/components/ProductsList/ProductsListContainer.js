@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {connect} from 'react-redux'
-import {getProductsByCategory, getProductsByFilter} from './../../queries'
+import {getProducts} from './../../queries'
 import ProductsList from './ProductsList'
 import {setError} from './../../redux/errorsReducer'
 import Spinner from '../common/Spinner/Spinner'
@@ -12,7 +12,7 @@ const ProductsListContainer = (props) => {
   const [activeSort, setActiveSort] = useState('')
 
   useEffect(() => {
-    getProductsByCategory(props.productCategory)
+    getProducts(props.productCategory, props.queryParameter)
       .then(data => setProductsData(data))
       .then(() => setIsContentLoaded(true))
       .catch(error => props.setError(error))
