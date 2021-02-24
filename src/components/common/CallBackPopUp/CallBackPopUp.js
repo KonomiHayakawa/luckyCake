@@ -5,7 +5,7 @@ import ClosePopUpIcon from './ClosePopUpIcon'
 import PopUpDecoration from './PopUpDecoration/PopUpDecoration'
 import SuccessMessage from './SuccessMessage/SuccessMessage'
 
-const CallBackPopUP = (props) => {
+const CallBackPopUp = (props) => {
   return (
     <div className={classes.wrapper}>
       {props.successMessage ? (
@@ -24,4 +24,4 @@ const CallBackPopUP = (props) => {
   )
 }
 
-export default CallBackPopUP
+export default CallBackPopUp
